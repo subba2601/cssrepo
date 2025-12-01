@@ -1,1 +1,77 @@
+body {
+    background-color: rgba(36, 42, 38, 0.61);
+    height: auto;
+    min-height: auto;
+    padding: 10px;
+}
 
+// to select all fields - this contains a label and an input
+
+.fields {
+  padding: 10px;
+} 
+
+/ ****** labels by field ****** /
+
+.card-holder-field label {
+    color: pink;
+}
+
+.card-number-field label {
+    color: pink;
+}
+
+.card-expiry-field label {
+    color: pink;
+}
+
+.security-code-field label {
+    color: pink;
+}
+
+/ ****** inputs by field  ****** /
+
+
+.card-holder-field input {
+    background: pink;
+}
+
+.card-number-field input {
+    background: pink;
+}
+
+.card-expiry-field input {
+    background: pink;
+}
+
+.security-code-field input {
+    background: pink;
+}
+
+// to select disabled inputs
+
+input:disabled {
+   background: pink;
+}
+
+// to select validation error
+
+.card-number-field span {
+   color: pink;
+}
+
+
+// pay now button
+
+#pay-now {
+    width: 100%;
+    background-color: #41941b;
+    font-size: 16px;
+    line-height: 24px;
+    height: 55px;
+    color: #fafafa;
+    border-radius: 0;
+    background-image: none;
+    border-style: unset;
+    border: none;
+}
