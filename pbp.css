@@ -122,7 +122,7 @@ textarea[disabled] {
   opacity: 1 !important;
 }
 
-/* DEFAULT BUTTON STYLES - Red buttons */
+/* DEFAULT BUTTON STYLES - All buttons start as RED */
 button[type="submit"],
 button[type="button"],
 button,
@@ -177,46 +177,67 @@ button[disabled] {
   color: #666666 !important;
 }
 
-/* CRITICAL: Grey styling ONLY for the SECOND button (Back button) */
-/* First button (Confirm) will use default red styling */
-form button:nth-of-type(2),
-form button[type="button"]:nth-of-type(2),
-form button[type="submit"]:nth-of-type(2) {
+/* STRATEGY 1: Target the LAST button (which should be Back) */
+button + button,
+button[type="button"] + button[type="button"],
+button[type="submit"] + button[type="button"] {
   background-color: #6c757d !important;
   background: #6c757d !important;
 }
 
-form button:nth-of-type(2):hover,
-form button[type="button"]:nth-of-type(2):hover,
-form button[type="submit"]:nth-of-type(2):hover {
+button + button:hover,
+button[type="button"] + button[type="button"]:hover,
+button[type="submit"] + button[type="button"]:hover {
   background-color: #5a6268 !important;
   background: #5a6268 !important;
 }
 
-form button:nth-of-type(2):disabled,
-form button[type="button"]:nth-of-type(2):disabled,
-form button[type="submit"]:nth-of-type(2):disabled {
+button + button:disabled,
+button[type="button"] + button[type="button"]:disabled,
+button[type="submit"] + button[type="button"]:disabled {
   background-color: #cccccc !important;
   background: #cccccc !important;
 }
 
-/* ALTERNATIVE: Target by position - last button in form */
-form button:last-of-type:not(:first-of-type) {
+/* STRATEGY 2: Target by nth-child */
+form button:nth-child(2),
+form > button:nth-child(2) {
   background-color: #6c757d !important;
   background: #6c757d !important;
 }
 
-form button:last-of-type:not(:first-of-type):hover {
+form button:nth-child(2):hover,
+form > button:nth-child(2):hover {
   background-color: #5a6268 !important;
   background: #5a6268 !important;
 }
 
-form button:last-of-type:not(:first-of-type):disabled {
+form button:nth-child(2):disabled,
+form > button:nth-child(2):disabled {
   background-color: #cccccc !important;
   background: #cccccc !important;
 }
 
-/* BACKUP: Class-based selectors for Back buttons */
+/* STRATEGY 3: If buttons are in a container/wrapper */
+div button:last-child,
+div > button:last-child {
+  background-color: #6c757d !important;
+  background: #6c757d !important;
+}
+
+div button:last-child:hover,
+div > button:last-child:hover {
+  background-color: #5a6268 !important;
+  background: #5a6268 !important;
+}
+
+div button:last-child:disabled,
+div > button:last-child:disabled {
+  background-color: #cccccc !important;
+  background: #cccccc !important;
+}
+
+/* STRATEGY 4: Class-based and attribute-based selectors */
 .back-button,
 button.back-button,
 button[value="Back"],
