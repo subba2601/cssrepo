@@ -1,77 +1,342 @@
 body {
-    background-color: rgba(36, 42, 38, 0.61);
-    height: auto;
-    min-height: auto;
-    padding: 10px;
+  background-color: rgba(36, 42, 38, 0.61) !important;
+  height: auto !important;
+  min-height: auto !important;
+  padding: 10px !important;
+  margin: 0 !important;
+  font-family: Arial, Helvetica, sans-serif !important;
 }
 
-// to select all fields - this contains a label and an input
+form {
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 14px !important;
+  color: #333 !important;
+  margin-bottom: 0 !important;
+}
+
 
 .fields {
-  padding: 10px;
-} 
-
-/ ****** labels by field ****** /
-
-.card-holder-field label {
-    color: pink;
+  padding: 10px !important;
 }
 
-.card-number-field label {
-    color: pink;
+.form-group,
+.field-group,
+.input-group {
+  margin-bottom: 16px !important;
 }
 
-.card-expiry-field label {
-    color: pink;
+
+h3,
+.m-0,
+.mb-4,
+h3.m-0.mb-4 {
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  color: #333 !important;
+  margin: 0 0 16px 0 !important;
+  line-height: 1.4 !important;
 }
 
-.security-code-field label {
-    color: pink;
+label,
+.font-semibold,
+.block,
+.text-sm,
+label.font-semibold,
+label.block,
+label.text-sm,
+label.font-semibold.block,
+label.font-semibold.text-sm,
+label.block.text-sm,
+label.font-semibold.block.text-sm {
+  display: block !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #333 !important;
+  margin-bottom: 8px !important;
+  line-height: 1.4 !important;
+  background: transparent !important;
 }
 
-/ ****** inputs by field  ****** /
 
-
-.card-holder-field input {
-    background: pink;
+.card-holder-field label,
+.card-holder-field label.font-semibold,
+.card-holder-field label.block,
+.card-holder-field label.text-sm {
+  color: red !important;
 }
 
-.card-number-field input {
-    background: pink;
+.card-number-field label,
+.card-number-field label.font-semibold,
+.card-number-field label.block,
+.card-number-field label.text-sm {
+  color: green !important;
 }
 
-.card-expiry-field input {
-    background: pink;
+.card-expiry-field label,
+.card-expiry-field label.font-semibold,
+.card-expiry-field label.block,
+.card-expiry-field label.text-sm {
+  color: blue !important;
 }
 
-.security-code-field input {
-    background: pink;
+
+.security-code-field label,
+.security-code-field label.font-semibold,
+.security-code-field label.block,
+.security-code-field label.text-sm {
+  color: pink !important;
 }
 
-// to select disabled inputs
 
-input:disabled {
-   background: pink;
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select,
+.input-container {
+  width: 100% !important;
+  height: 40px !important;
+  padding: 8px 12px !important;
+  font-size: 14px !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  color: #333 !important;
+  border: 1px solid #ccc !important;
+  border-radius: 4px !important;
+  background-color: #fff !important;
+  box-sizing: border-box !important;
+  transition: border-color 0.3s ease !important;
 }
 
-// to select validation error
+
+
+.card-holder-field input,
+.card-holder-field input[type="text"] {
+  background: red !important;
+  color: #fff !important;
+}
+
+
+.card-number-field input,
+.card-number-field input[type="text"] {
+  background: green !important;
+  color: #fff !important;
+}
+
+
+.card-expiry-field input,
+.card-expiry-field input[type="text"] {
+  background: blue !important;
+  color: #fff !important;
+}
+
+
+.security-code-field input,
+.security-code-field input[type="text"],
+.security-code-field input[type="number"] {
+  background: pink !important;
+  color: #333 !important;
+}
+
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+select:focus {
+  outline: none !important;
+  border-color: #d50032 !important;
+  box-shadow: 0 0 0 2px rgba(213, 0, 50, 0.1) !important;
+}
+
+input:disabled,
+input[disabled] {
+  background: yellow !important;
+  cursor: not-allowed !important;
+  opacity: 0.6 !important;
+}
+
+
+button[type="submit"],
+button[type="button"],
+.pbp-button,
+.pbp-button--primary,
+button,
+#pay-now,
+button#pay-now,
+.zeal-button,
+.zeal-button-primary,
+.submit-button,
+button.zeal-button,
+button.zeal-button-primary,
+button.submit-button,
+button.zeal-button.zeal-button-primary,
+button.zeal-button.zeal-button-primary.w-full,
+button.zeal-button.zeal-button-primary.w-full.mb-2,
+button.zeal-button.zeal-button-primary.w-full.mb-2.submit-button,
+button[type="button"].zeal-button.zeal-button-primary,
+button[type="button"].zeal-button.zeal-button-primary.w-full.mb-2.submit-button {
+  display: inline-block !important;
+  padding: 12px 24px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  color: #fafafa !important;
+  background-color: #d50032 !important;
+  background: #d50032 !important;
+  border: none !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  transition: background-color 0.3s ease !important;
+  text-align: center !important;
+  min-width: 120px !important;
+  width: 100% !important;
+  height: 55px !important;
+  line-height: 24px !important;
+  background-image: none !important;
+  border-style: unset !important;
+  box-shadow: none !important;
+}
+
+button span,
+button.zeal-button span,
+.zeal-button span,
+.submit-button span,
+button.zeal-button span.flex,
+button.zeal-button span.items-center,
+span.flex.items-center.w-full.justify-center {
+  color: #fafafa !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+
+button[type="submit"]:hover,
+button[type="button"]:hover,
+.pbp-button--primary:hover,
+button:hover,
+#pay-now:hover,
+.zeal-button:hover,
+.zeal-button-primary:hover,
+.submit-button:hover,
+button.zeal-button:hover,
+button.zeal-button.zeal-button-primary:hover,
+button[type="button"].zeal-button.zeal-button-primary:hover {
+  background-color: #b8002b !important;
+  background: #b8002b !important;
+}
+
+/* Button DISABLED state */
+button[type="submit"]:disabled,
+button[type="button"]:disabled,
+.pbp-button--primary:disabled,
+button:disabled,
+#pay-now:disabled,
+.zeal-button:disabled,
+.zeal-button-primary:disabled,
+.submit-button:disabled,
+button.zeal-button:disabled,
+button[disabled],
+.zeal-button[disabled],
+button.zeal-button[disabled],
+button.zeal-button.zeal-button-primary[disabled],
+button[type="button"].zeal-button.zeal-button-primary[disabled] {
+  background-color: #d50032 !important;
+  background: #d50032 !important;
+  cursor: not-allowed !important;
+  opacity: 0.6 !important;
+}
+
+
+.error,
+.errorspan,
+.pbp-element__error,
+.card-number-field span,
+.card-holder-field span,
+.card-expiry-field span,
+.security-code-field span {
+  display: block !important;
+  color: orange !important;
+  font-size: 12px !important;
+  margin-top: 4px !important;
+  line-height: 1.4 !important;
+}
+
 
 .card-number-field span {
-   color: pink;
+  color: orange !important;
 }
 
 
-// pay now button
 
-#pay-now {
-    width: 100%;
-    background-color: #41941b;
-    font-size: 16px;
-    line-height: 24px;
-    height: 55px;
-    color: #fafafa;
-    border-radius: 0;
-    background-image: none;
-    border-style: unset;
-    border: none;
+em {
+  color: #d50032 !important;
+  font-style: normal !important;
+  margin-left: 2px !important;
 }
+
+
+.infoLabel {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  color: #666 !important;
+  margin-left: 8px !important;
+}
+
+
+::placeholder {
+  color: #999 !important;
+  opacity: 1 !important;
+}
+
+
+.w-full {
+  width: 100% !important;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem !important;
+}
+
+.flex {
+  display: flex !important;
+}
+
+.items-center {
+  align-items: center !important;
+}
+
+.justify-center {
+  justify-content: center !important;
+}
+
+
+form > div:last-child,
+.flex:last-child,
+button[type="submit"]:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Remove bottom padding from containers */
+.w-full > div:last-child,
+.flex-col:last-child {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+
+.form-control,
+.form-input,
+.input-field {
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 14px !important;
+}
+
+
+
+* {
+  box-sizing: border-box !important;
+}
+
