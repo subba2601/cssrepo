@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dynamic Back Button Styling</title>
-<style>
 * {
   box-sizing: border-box !important;
 }
@@ -355,49 +348,3 @@ button[disabled] {
 *:focus:not(:focus-visible) {
   outline: none !important;
 }
-</style>
-</head>
-<body>
-
-<script>
-// Function to style all buttons with "Back" text
-function styleBackButtons() {
-  // Get all button elements
-  const buttons = document.querySelectorAll('button, input[type="button"], input[type="submit"]');
-  
-  buttons.forEach(button => {
-    // Get the button's text content or value
-    const buttonText = (button.textContent || button.value || '').trim().toLowerCase();
-    
-    // If the button text is "back", add the back-button class
-    if (buttonText === 'back') {
-      button.classList.add('back-button');
-    }
-  });
-}
-
-// Run when DOM is fully loaded
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', styleBackButtons);
-} else {
-  styleBackButtons();
-}
-
-// Watch for dynamically added buttons
-const observer = new MutationObserver(function(mutations) {
-  mutations.forEach(function(mutation) {
-    if (mutation.addedNodes.length) {
-      styleBackButtons();
-    }
-  });
-});
-
-// Start observing the document for changes
-observer.observe(document.body, {
-  childList: true,
-  subtree: true
-});
-</script>
-
-</body>
-</html>
