@@ -122,6 +122,7 @@ textarea[disabled] {
   opacity: 1 !important;
 }
 
+/* DEFAULT BUTTON STYLES - Red buttons */
 button[type="submit"],
 button[type="button"],
 button,
@@ -176,7 +177,46 @@ button[disabled] {
   color: #666666 !important;
 }
 
-/* UPDATED: Enhanced styling for Back buttons - Multiple selectors for better coverage */
+/* CRITICAL: Grey styling for the SECOND button in forms (Back button) */
+/* This targets the second button assuming Confirm is first, Back is second */
+form button:nth-of-type(2),
+form button[type="button"]:nth-of-type(2),
+form button[type="submit"]:nth-of-type(2) {
+  background-color: #6c757d !important;
+  background: #6c757d !important;
+}
+
+form button:nth-of-type(2):hover,
+form button[type="button"]:nth-of-type(2):hover,
+form button[type="submit"]:nth-of-type(2):hover {
+  background-color: #5a6268 !important;
+  background: #5a6268 !important;
+}
+
+form button:nth-of-type(2):disabled,
+form button[type="button"]:nth-of-type(2):disabled,
+form button[type="submit"]:nth-of-type(2):disabled {
+  background-color: #cccccc !important;
+  background: #cccccc !important;
+}
+
+/* ALTERNATIVE: Target by position - last button in form */
+form button:last-of-type:not(:first-of-type) {
+  background-color: #6c757d !important;
+  background: #6c757d !important;
+}
+
+form button:last-of-type:not(:first-of-type):hover {
+  background-color: #5a6268 !important;
+  background: #5a6268 !important;
+}
+
+form button:last-of-type:not(:first-of-type):disabled {
+  background-color: #cccccc !important;
+  background: #cccccc !important;
+}
+
+/* BACKUP: Class-based selectors for Back buttons */
 .back-button,
 button.back-button,
 button[value="Back"],
@@ -205,11 +245,6 @@ input[type="button"][value="Back"]:disabled,
 input[type="submit"][value="Back"]:disabled {
   background-color: #cccccc !important;
   background: #cccccc !important;
-}
-
-/* ADDITIONAL: Target buttons by text content for iframe context */
-button:not(.pbp-button--primary):not([class*="confirm"]):not([class*="pay"]):not([class*="submit"]) {
-  /* This will be overridden by JavaScript for Back buttons */
 }
 
 .error,
@@ -368,7 +403,3 @@ button:not(.pbp-button--primary):not([class*="confirm"]):not([class*="pay"]):not
 *:focus:not(:focus-visible) {
   outline: none !important;
 }
-
-
-
-
