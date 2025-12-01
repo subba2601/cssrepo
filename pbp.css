@@ -177,8 +177,8 @@ button[disabled] {
   color: #666666 !important;
 }
 
-/* CRITICAL: Grey styling for the SECOND button in forms (Back button) */
-/* This targets the second button assuming Confirm is first, Back is second */
+/* CRITICAL: Grey styling ONLY for the SECOND button (Back button) */
+/* First button (Confirm) will use default red styling */
 form button:nth-of-type(2),
 form button[type="button"]:nth-of-type(2),
 form button[type="submit"]:nth-of-type(2) {
