@@ -1,17 +1,15 @@
 * {
   box-sizing: border-box !important;
-  max-width: 100% !important;
 }
 
 html {
   overflow: hidden !important;
   overflow-x: hidden !important;
   overflow-y: hidden !important;
-  max-width: 100% !important;
-  width: 100% !important;
-  height: auto !important;
   margin: 0 !important;
   padding: 0 !important;
+  width: 100% !important;
+  height: auto !important;
 }
 
 body {
@@ -24,14 +22,11 @@ body {
   overflow: hidden !important;
   overflow-x: hidden !important;
   overflow-y: hidden !important;
-  max-width: 100% !important;
   width: 100% !important;
   font-size: 14px !important;
   color: #333 !important;
   line-height: 1.5 !important;
 }
-
-
 
 form {
   font-family: Arial, Helvetica, sans-serif !important;
@@ -39,23 +34,10 @@ form {
   color: #333 !important;
   margin: 0 !important;
   padding: 0 !important;
-  max-width: 100% !important;
-  overflow: hidden !important;
   width: 100% !important;
 }
 
-.fields,
-.form-fields,
-.payment-form {
-  padding: 0 !important;
-  margin: 0 !important;
-  width: 100% !important;
-}
-
-
-h1, h2, h3, h4, h5, h6,
-.m-0, .mb-4,
-h3.m-0.mb-4 {
+h1, h2, h3, h4, h5, h6 {
   font-family: Arial, Helvetica, sans-serif !important;
   font-size: 18px !important;
   font-weight: 600 !important;
@@ -63,21 +45,9 @@ h3.m-0.mb-4 {
   margin: 0 0 16px 0 !important;
   padding: 0 !important;
   line-height: 1.4 !important;
-  background: transparent !important;
 }
 
-
-label,
-.font-semibold,
-.block,
-.text-sm,
-label.font-semibold,
-label.block,
-label.text-sm,
-label.font-semibold.block,
-label.font-semibold.text-sm,
-label.block.text-sm,
-label.font-semibold.block.text-sm {
+label {
   display: block !important;
   font-family: Arial, Helvetica, sans-serif !important;
   font-size: 14px !important;
@@ -86,36 +56,24 @@ label.font-semibold.block.text-sm {
   margin: 0 0 8px 0 !important;
   padding: 0 !important;
   line-height: 1.4 !important;
+}
+
+.pbp-element__input,
+.input-wrapper,
+.field-wrapper {
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
   background: transparent !important;
+  box-shadow: none !important;
 }
-
-
-em,
-.required {
-  color: #d50032 !important;
-  font-style: normal !important;
-  margin-left: 2px !important;
-}
-
-/* Info labels */
-.infoLabel,
-.help-text {
-  font-size: 12px !important;
-  font-weight: 400 !important;
-  color: #666 !important;
-  margin-left: 8px !important;
-  margin-top: 4px !important;
-}
-
-
 
 input[type="text"],
 input[type="email"],
 input[type="tel"],
 input[type="number"],
 select,
-textarea,
-.input-container {
+textarea {
   width: 100% !important;
   height: 40px !important;
   padding: 8px 12px !important;
@@ -128,6 +86,7 @@ textarea,
   box-sizing: border-box !important;
   transition: border-color 0.3s ease !important;
   margin: 0 !important;
+  outline: none !important;
 }
 
 textarea {
@@ -135,18 +94,16 @@ textarea {
   min-height: 80px !important;
 }
 
-
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="tel"]:focus,
 input[type="number"]:focus,
 select:focus,
 textarea:focus {
-  outline: none !important;
   border-color: #d50032 !important;
   box-shadow: 0 0 0 2px rgba(213, 0, 50, 0.1) !important;
+  outline: none !important;
 }
-
 
 input:disabled,
 input[disabled],
@@ -160,87 +117,18 @@ textarea[disabled] {
   color: #999 !important;
 }
 
-/* Placeholder styling */
-::placeholder,
-::-webkit-input-placeholder,
-::-moz-placeholder,
-:-ms-input-placeholder {
+::placeholder {
   color: #999 !important;
   opacity: 1 !important;
 }
 
-
-.card-holder-field label {
-  color: #333 !important;
-}
-
-.card-holder-field input,
-.card-holder-field input[type="text"] {
-  background-color: #fff !important;
-  color: #333 !important;
-}
-
-.card-number-field label {
-  color: #333 !important;
-}
-
-.card-number-field input,
-.card-number-field input[type="text"] {
-  background-color: #fff !important;
-  color: #333 !important;
-}
-
-.card-expiry-field label {
-  color: #333 !important;
-}
-
-.card-expiry-field input,
-.card-expiry-field input[type="text"] {
-  background-color: #fff !important;
-  color: #333 !important;
-}
-
-
-.security-code-field label,
-.cvv-field label {
-  color: #333 !important;
-}
-
-.security-code-field input,
-.security-code-field input[type="text"],
-.security-code-field input[type="number"],
-.cvv-field input {
-  background-color: #fff !important;
-  color: #333 !important;
-}
-.email-field input,
-input[type="email"] {
-  background-color: #fff !important;
-  color: #333 !important;
-}
-
-
 button[type="submit"],
 button[type="button"],
-.pbp-button,
-.pbp-button--primary,
 button,
-#pay-now,
-button#pay-now,
-.zeal-button,
-.zeal-button-primary,
-.submit-button,
 .btn,
-.btn-primary,
-button.zeal-button,
-button.zeal-button-primary,
-button.submit-button,
-button.zeal-button.zeal-button-primary,
-button.zeal-button.zeal-button-primary.w-full,
-button.zeal-button.zeal-button-primary.w-full.mb-2,
-button.zeal-button.zeal-button-primary.w-full.mb-2.submit-button,
-button[type="button"].zeal-button.zeal-button-primary,
-button[type="button"].zeal-button.zeal-button-primary.w-full.mb-2.submit-button {
+.submit-button,
+.pbp-button,
+.pbp-button--primary {
   display: inline-block !important;
   padding: 12px 24px !important;
   font-size: 16px !important;
@@ -251,68 +139,36 @@ button[type="button"].zeal-button.zeal-button-primary.w-full.mb-2.submit-button 
   background: #d50032 !important;
   background-image: none !important;
   border: none !important;
-  border-style: none !important;
   border-radius: 4px !important;
   cursor: pointer !important;
   transition: background-color 0.3s ease !important;
   text-align: center !important;
-  min-width: 120px !important;
   width: 100% !important;
   height: 55px !important;
   line-height: 24px !important;
   box-shadow: none !important;
   margin: 16px 0 0 0 !important;
   text-decoration: none !important;
-  text-transform: none !important;
 }
 
-
-button span,
-button.zeal-button span,
-.zeal-button span,
-.submit-button span,
-button.zeal-button span.flex,
-button.zeal-button span.items-center,
-span.flex.items-center.w-full.justify-center,
-button .btn-text {
+button span {
   color: #ffffff !important;
   font-family: Arial, Helvetica, sans-serif !important;
   background: transparent !important;
-  background-color: transparent !important;
   font-weight: 600 !important;
 }
 
-
 button[type="submit"]:hover,
 button[type="button"]:hover,
-.pbp-button--primary:hover,
-button:hover,
-#pay-now:hover,
-.zeal-button:hover,
-.zeal-button-primary:hover,
-.submit-button:hover,
-button.zeal-button:hover,
-button.zeal-button.zeal-button-primary:hover,
-button[type="button"].zeal-button.zeal-button-primary:hover {
+button:hover {
   background-color: #b8002b !important;
   background: #b8002b !important;
 }
 
-
 button[type="submit"]:disabled,
 button[type="button"]:disabled,
-.pbp-button--primary:disabled,
 button:disabled,
-#pay-now:disabled,
-.zeal-button:disabled,
-.zeal-button-primary:disabled,
-.submit-button:disabled,
-button.zeal-button:disabled,
-button[disabled],
-.zeal-button[disabled],
-button.zeal-button[disabled],
-button.zeal-button.zeal-button-primary[disabled],
-button[type="button"].zeal-button.zeal-button-primary[disabled] {
+button[disabled] {
   background-color: #cccccc !important;
   background: #cccccc !important;
   cursor: not-allowed !important;
@@ -320,44 +176,19 @@ button[type="button"].zeal-button.zeal-button-primary[disabled] {
   color: #666666 !important;
 }
 
-
-button.secondary,
-.btn-secondary {
-  background-color: #f5f5f5 !important;
-  background: #f5f5f5 !important;
-  color: #333 !important;
-}
-
-button.secondary:hover,
-.btn-secondary:hover {
-  background-color: #e0e0e0 !important;
-  background: #e0e0e0 !important;
-}
-
-
-
 .error,
-.errorspan,
 .error-message,
-.pbp-element__error,
-.card-number-field span.error,
-.card-holder-field span.error,
-.card-expiry-field span.error,
-.security-code-field span.error,
 .field-error {
   display: block !important;
   color: #d50032 !important;
   font-size: 12px !important;
   margin-top: 4px !important;
-  margin-bottom: 0 !important;
   padding: 0 !important;
   line-height: 1.4 !important;
-  font-weight: 400 !important;
 }
 
 .success,
-.success-message,
-.alert-success {
+.success-message {
   display: block !important;
   color: #28a745 !important;
   background-color: #d4edda !important;
@@ -368,267 +199,28 @@ button.secondary:hover,
   font-size: 14px !important;
 }
 
-
-.success-icon,
-.checkmark {
-  color: #28a745 !important;
-  font-size: 48px !important;
-  margin: 0 auto 16px !important;
-  display: block !important;
-  text-align: center !important;
-}
-
-
-.w-full {
-  width: 100% !important;
-}
-
-.mb-2 {
-  margin-bottom: 0.5rem !important;
-}
-
-.mb-4 {
-  margin-bottom: 1rem !important;
-}
-
-.mt-2 {
-  margin-top: 0.5rem !important;
-}
-
-.mt-4 {
-  margin-top: 1rem !important;
-}
-
-.flex {
-  display: flex !important;
-}
-
-.items-center {
-  align-items: center !important;
-}
-
-.justify-center {
-  justify-content: center !important;
-}
-
-.text-center {
-  text-align: center !important;
-}
-
-
-
 .form-group,
 .field-group,
-.input-group,
-.form-field {
+.pbp-form__element {
   margin-bottom: 16px !important;
   width: 100% !important;
 }
 
-form > div:last-child,
-.flex:last-child,
-button[type="submit"]:last-child {
-  margin-bottom: 0 !important;
-}
-
-.w-full > div:last-child,
-.flex-col:last-child {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-.grid,
 .row {
   display: flex !important;
   flex-wrap: wrap !important;
   margin: 0 -8px !important;
 }
 
-.col,
-.grid-col {
+.col {
   flex: 1 !important;
   padding: 0 8px !important;
 }
 
-.col-6,
-.grid-col-6 {
+.col-6 {
   flex: 0 0 50% !important;
   max-width: 50% !important;
   padding: 0 8px !important;
-}
-
-.col-4,
-.grid-col-4 {
-  flex: 0 0 33.333% !important;
-  max-width: 33.333% !important;
-  padding: 0 8px !important;
-}
-
-.col-8,
-.grid-col-8 {
-  flex: 0 0 66.666% !important;
-  max-width: 66.666% !important;
-  padding: 0 8px !important;
-}
-
-.card-icon,
-.payment-icon {
-  width: 40px !important;
-  height: 25px !important;
-  margin-right: 8px !important;
-  vertical-align: middle !important;
-}
-
-.card-icons,
-.payment-icons {
-  margin-top: 8px !important;
-  display: flex !important;
-  gap: 8px !important;
-  align-items: center !important;
-}
-
-
-.loading,
-.spinner {
-  display: inline-block !important;
-  width: 20px !important;
-  height: 20px !important;
-  border: 3px solid #f3f3f3 !important;
-  border-top: 3px solid #d50032 !important;
-  border-radius: 50% !important;
-  animation: spin 1s linear infinite !important;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-
-.secure-badge,
-.security-info {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  margin-top: 16px !important;
-  padding: 8px !important;
-  background-color: #f8f9fa !important;
-  border-radius: 4px !important;
-  font-size: 12px !important;
-  color: #666 !important;
-}
-
-.secure-icon,
-.lock-icon {
-  margin-right: 4px !important;
-  color: #28a745 !important;
-}
-
-@media (max-width: 768px) {
-  body {
-    padding: 15px !important;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-size: 16px !important;
-  }
-  
-  button[type="submit"],
-  button[type="button"],
-  .submit-button {
-    font-size: 15px !important;
-    height: 50px !important;
-    padding: 10px 20px !important;
-  }
-  
-  .col,
-  .grid-col,
-  .col-6,
-  .grid-col-6 {
-    flex: 0 0 100% !important;
-    max-width: 100% !important;
-  }
-  
-  .form-group,
-  .field-group,
-  .input-group {
-    margin-bottom: 12px !important;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    padding: 10px !important;
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  input[type="number"],
-  select {
-    height: 44px !important;
-    font-size: 16px !important;
-  }
-  
-  button[type="submit"],
-  button[type="button"],
-  .submit-button {
-    height: 48px !important;
-    font-size: 16px !important;
-  }
-}
-
-@media print {
-  body {
-    background-color: #fff !important;
-    padding: 0 !important;
-  }
-  
-  button,
-  .no-print {
-    display: none !important;
-  }
-  
-  .success-message {
-    border: 2px solid #28a745 !important;
-  }
-}
-
-::-webkit-scrollbar {
-  width: 0px !important;
-  height: 0px !important;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent !important;
-}
-
-::-webkit-scrollbar-thumb {
-  background: transparent !important;
-}
-
-
-*:focus-visible {
-  outline: 2px solid #d50032 !important;
-  outline-offset: 2px !important;
-}
-
-
-*:focus:not(:focus-visible) {
-  outline: none !important;
-}
-
-
-.sr-only {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  padding: 0 !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  clip: rect(0, 0, 0, 0) !important;
-  white-space: nowrap !important;
-  border-width: 0 !important;
 }
 
 .receipt-container,
@@ -650,6 +242,7 @@ button[type="submit"]:last-child {
   font-weight: 700 !important;
   color: #333 !important;
   margin: 16px 0 !important;
+  text-align: center !important;
 }
 
 .receipt-details,
@@ -679,12 +272,63 @@ button[type="submit"]:last-child {
   text-align: right !important;
 }
 
-body * {
-  overflow-x: hidden !important;
+.success-icon {
+  width: 60px !important;
+  height: 60px !important;
+  margin: 0 auto 20px !important;
+  display: block !important;
 }
 
+@media (max-width: 768px) {
+  body {
+    padding: 15px !important;
+  }
+  
+  h1, h2, h3 {
+    font-size: 16px !important;
+  }
+  
+  button {
+    font-size: 15px !important;
+    height: 50px !important;
+  }
+  
+  .col-6 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+}
 
-[style*="position: absolute"],
-[style*="position: fixed"] {
-  max-width: calc(100% - 40px) !important;
+@media (max-width: 480px) {
+  body {
+    padding: 10px !important;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  select {
+    height: 44px !important;
+    font-size: 16px !important;
+  }
+  
+  button {
+    height: 48px !important;
+    font-size: 16px !important;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0px !important;
+  height: 0px !important;
+}
+
+*:focus-visible {
+  outline: 2px solid #d50032 !important;
+  outline-offset: 2px !important;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none !important;
 }
