@@ -176,6 +176,27 @@ button[disabled] {
   color: #666666 !important;
 }
 
+/* Grey styling for buttons with "Back" text */
+button[value="Back"],
+button[value="back"],
+input[type="submit"][value="Back"],
+input[type="submit"][value="back"],
+input[type="button"][value="Back"],
+input[type="button"][value="back"] {
+  background-color: #6c757d !important;
+  background: #6c757d !important;
+}
+
+button[value="Back"]:hover,
+button[value="back"]:hover,
+input[type="submit"][value="Back"]:hover,
+input[type="submit"][value="back"]:hover,
+input[type="button"][value="Back"]:hover,
+input[type="button"][value="back"]:hover {
+  background-color: #5a6268 !important;
+  background: #5a6268 !important;
+}
+
 .error,
 .error-message,
 .field-error {
