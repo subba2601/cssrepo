@@ -149,139 +149,24 @@
   display: none;
 }
 
-/* ============================================
-   CRITICAL GAP FIX SECTION
-   ============================================ */
-
-/* Target the Reference no form element specifically */
-div.pbp-form__element.pbp-element:has(input[name="priRefNo"]) {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-/* Alternative selectors for Reference no field */
-.pbp-form__element:has(label[for="priRefNo"]) {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-/* Direct targeting of elements within Reference no field */
-input[name="priRefNo"] {
-  margin-bottom: 0 !important;
-  padding-bottom: 8px !important;
-}
-
-.pbp-element__input {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-div.pbp-element__input {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-/* Remove spacing from row containing Reference no */
-.row:has(input[name="priRefNo"]) {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-.row .col {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-/* Remove spacing from error containers */
-.pbp-element__error {
-  margin-top: 4px !important;
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-ul.pbp-element__error {
-  margin-top: 4px !important;
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-  list-style: none;
-  padding-left: 0;
-}
-
-.pbp-element__error li {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-.errorspan {
-  margin-top: 4px !important;
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-  display: block !important;
-}
-
-span.errorspan.errormsg {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-/* Tooltip column spacing */
-.col-tooltip-fixed-width {
-  padding-left: 8px !important;
-  margin-bottom: 0 !important;
-}
-
-/* ============================================
-   BILLER ACCOUNT DISPLAY STYLES
-   ============================================ */
-
+/* Biller Account Display - FIX FOR GAP */
 .pbp-biller-account {
-  margin-top: 8px !important;
-  margin-bottom: 20px !important;
-  padding: 10px 12px !important;
-  background-color: #f0f8ff !important;
-  border-left: 4px solid #d50032 !important;
+  margin-top: -16px !important;
+  margin-bottom: 16px !important;
+  padding: 8px 12px !important;
+  background-color: #f8f9fa !important;
+  border-left: 3px solid #d50032 !important;
   border-radius: 4px !important;
-  display: block !important;
-  clear: both !important;
-  position: relative !important;
 }
 
 .pbp-biller-account p {
   margin: 0 !important;
-  padding: 0 !important;
   font-size: 14px !important;
   color: #333 !important;
   font-weight: 600 !important;
-  line-height: 1.4 !important;
 }
 
-/* ============================================
-   GENERAL FORM ELEMENT SPACING
-   ============================================ */
-
-.pbp-form__element {
-  margin-bottom: 20px;
-}
-
-/* But specifically for Reference no field followed by biller account */
-.pbp-form__element + .pbp-biller-account {
-  margin-top: 8px !important;
-}
-
-/* ============================================
-   PAYMENT AMOUNT FIELD SPACING
-   ============================================ */
-
-/* Ensure Payment amount field has proper spacing */
-div.pbp-form__element.pbp-element:has(input[name="initAmount"]) {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-/* ============================================
-   RESPONSIVE STYLES
-   ============================================ */
-
+/* Responsive Styles */
 @media (max-width: 768px) {
   .payment-modal-content {
     width: 98%;
@@ -294,11 +179,6 @@ div.pbp-form__element.pbp-element:has(input[name="initAmount"]) {
 
   .payment-modal-close {
     font-size: 24px;
-  }
-  
-  .pbp-biller-account {
-    margin-top: 8px !important;
-    padding: 8px 10px !important;
   }
 }
 
@@ -324,10 +204,5 @@ div.pbp-form__element.pbp-element:has(input[name="initAmount"]) {
 
   .payment-iframe {
     border-radius: 0;
-  }
-  
-  .pbp-biller-account {
-    margin-top: 8px !important;
-    padding: 8px !important;
   }
 }
