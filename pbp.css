@@ -176,20 +176,40 @@ button[disabled] {
   color: #666666 !important;
 }
 
-/* Class for Back buttons - applied dynamically by JavaScript */
-.back-button {
+/* UPDATED: Enhanced styling for Back buttons - Multiple selectors for better coverage */
+.back-button,
+button.back-button,
+button[value="Back"],
+button[type="button"][value="Back"],
+input[type="button"][value="Back"],
+input[type="submit"][value="Back"] {
   background-color: #6c757d !important;
   background: #6c757d !important;
 }
 
-.back-button:hover {
+.back-button:hover,
+button.back-button:hover,
+button[value="Back"]:hover,
+button[type="button"][value="Back"]:hover,
+input[type="button"][value="Back"]:hover,
+input[type="submit"][value="Back"]:hover {
   background-color: #5a6268 !important;
   background: #5a6268 !important;
 }
 
-.back-button:disabled {
+.back-button:disabled,
+button.back-button:disabled,
+button[value="Back"]:disabled,
+button[type="button"][value="Back"]:disabled,
+input[type="button"][value="Back"]:disabled,
+input[type="submit"][value="Back"]:disabled {
   background-color: #cccccc !important;
   background: #cccccc !important;
+}
+
+/* ADDITIONAL: Target buttons by text content for iframe context */
+button:not(.pbp-button--primary):not([class*="confirm"]):not([class*="pay"]):not([class*="submit"]) {
+  /* This will be overridden by JavaScript for Back buttons */
 }
 
 .error,
@@ -348,3 +368,7 @@ button[disabled] {
 *:focus:not(:focus-visible) {
   outline: none !important;
 }
+
+
+
+
