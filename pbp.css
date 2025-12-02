@@ -122,7 +122,6 @@ textarea[disabled] {
   opacity: 1 !important;
 }
 
-/* DEFAULT BUTTON STYLES - All buttons start as RED */
 button[type="submit"],
 button[type="button"],
 button,
@@ -177,95 +176,24 @@ button[disabled] {
   color: #666666 !important;
 }
 
-/* STRATEGY 1: Target the LAST button (which should be Back) */
-button + button,
-button[type="button"] + button[type="button"],
-button[type="submit"] + button[type="button"] {
+/* ONLY CHANGE: Grey styling for Back buttons - applied dynamically by JavaScript */
+.back-button {
   background-color: #6c757d !important;
   background: #6c757d !important;
 }
 
-button + button:hover,
-button[type="button"] + button[type="button"]:hover,
-button[type="submit"] + button[type="button"]:hover {
+.back-button:hover {
   background-color: #5a6268 !important;
   background: #5a6268 !important;
 }
 
-button + button:disabled,
-button[type="button"] + button[type="button"]:disabled,
-button[type="submit"] + button[type="button"]:disabled {
+.back-button:disabled {
   background-color: #cccccc !important;
   background: #cccccc !important;
 }
 
-/* STRATEGY 2: Target by nth-child */
-form button:nth-child(2),
-form > button:nth-child(2) {
-  background-color: #6c757d !important;
-  background: #6c757d !important;
-}
-
-form button:nth-child(2):hover,
-form > button:nth-child(2):hover {
-  background-color: #5a6268 !important;
-  background: #5a6268 !important;
-}
-
-form button:nth-child(2):disabled,
-form > button:nth-child(2):disabled {
-  background-color: #cccccc !important;
-  background: #cccccc !important;
-}
-
-/* STRATEGY 3: If buttons are in a container/wrapper */
-div button:last-child,
-div > button:last-child {
-  background-color: #6c757d !important;
-  background: #6c757d !important;
-}
-
-div button:last-child:hover,
-div > button:last-child:hover {
-  background-color: #5a6268 !important;
-  background: #5a6268 !important;
-}
-
-div button:last-child:disabled,
-div > button:last-child:disabled {
-  background-color: #cccccc !important;
-  background: #cccccc !important;
-}
-
-/* STRATEGY 4: Class-based and attribute-based selectors */
-.back-button,
-button.back-button,
-button[value="Back"],
-button[type="button"][value="Back"],
-input[type="button"][value="Back"],
-input[type="submit"][value="Back"] {
-  background-color: #6c757d !important;
-  background: #6c757d !important;
-}
-
-.back-button:hover,
-button.back-button:hover,
-button[value="Back"]:hover,
-button[type="button"][value="Back"]:hover,
-input[type="button"][value="Back"]:hover,
-input[type="submit"][value="Back"]:hover {
-  background-color: #5a6268 !important;
-  background: #5a6268 !important;
-}
-
-.back-button:disabled,
-button.back-button:disabled,
-button[value="Back"]:disabled,
-button[type="button"][value="Back"]:disabled,
-input[type="button"][value="Back"]:disabled,
-input[type="submit"][value="Back"]:disabled {
-  background-color: #cccccc !important;
-  background: #cccccc !important;
+button.back-button span {
+  color: #ffffff !important;
 }
 
 .error,
