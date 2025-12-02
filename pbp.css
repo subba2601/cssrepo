@@ -122,7 +122,6 @@ textarea[disabled] {
   opacity: 1 !important;
 }
 
-/* DEFAULT BUTTON STYLES - Red buttons */
 button[type="submit"],
 button[type="button"],
 button,
@@ -175,76 +174,6 @@ button[disabled] {
   cursor: not-allowed !important;
   opacity: 0.6 !important;
   color: #666666 !important;
-}
-
-/* CRITICAL: Grey styling ONLY for the SECOND button (Back button) */
-/* First button (Confirm) will use default red styling */
-form button:nth-of-type(2),
-form button[type="button"]:nth-of-type(2),
-form button[type="submit"]:nth-of-type(2) {
-  background-color: #6c757d !important;
-  background: #6c757d !important;
-}
-
-form button:nth-of-type(2):hover,
-form button[type="button"]:nth-of-type(2):hover,
-form button[type="submit"]:nth-of-type(2):hover {
-  background-color: #5a6268 !important;
-  background: #5a6268 !important;
-}
-
-form button:nth-of-type(2):disabled,
-form button[type="button"]:nth-of-type(2):disabled,
-form button[type="submit"]:nth-of-type(2):disabled {
-  background-color: #cccccc !important;
-  background: #cccccc !important;
-}
-
-/* ALTERNATIVE: Target by position - last button in form */
-form button:last-of-type:not(:first-of-type) {
-  background-color: #6c757d !important;
-  background: #6c757d !important;
-}
-
-form button:last-of-type:not(:first-of-type):hover {
-  background-color: #5a6268 !important;
-  background: #5a6268 !important;
-}
-
-form button:last-of-type:not(:first-of-type):disabled {
-  background-color: #cccccc !important;
-  background: #cccccc !important;
-}
-
-/* BACKUP: Class-based selectors for Back buttons */
-.back-button,
-button.back-button,
-button[value="Back"],
-button[type="button"][value="Back"],
-input[type="button"][value="Back"],
-input[type="submit"][value="Back"] {
-  background-color: #6c757d !important;
-  background: #6c757d !important;
-}
-
-.back-button:hover,
-button.back-button:hover,
-button[value="Back"]:hover,
-button[type="button"][value="Back"]:hover,
-input[type="button"][value="Back"]:hover,
-input[type="submit"][value="Back"]:hover {
-  background-color: #5a6268 !important;
-  background: #5a6268 !important;
-}
-
-.back-button:disabled,
-button.back-button:disabled,
-button[value="Back"]:disabled,
-button[type="button"][value="Back"]:disabled,
-input[type="button"][value="Back"]:disabled,
-input[type="submit"][value="Back"]:disabled {
-  background-color: #cccccc !important;
-  background: #cccccc !important;
 }
 
 .error,
